@@ -308,3 +308,43 @@ body.modal-open{overflow:hidden}
 }
 /* Reduced motion */
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:1ms!important;animation-iteration-count:1!important;transition-duration:1ms!important;scroll-behavior:auto!important}}
+
+/* Оборудование: фото, карточки, просмотр */
+.view-toggle{display:inline-flex;border:1px solid var(--line-strong);border-radius:10px;overflow:hidden;background:#fff}
+.vt-btn{border:0;background:#fff;padding:9px 12px;font-weight:650;font-size:12.5px;color:#5b6479;transition:background var(--t-fast),color var(--t-fast)}
+.vt-btn+.vt-btn{border-left:1px solid var(--line-strong)}.vt-btn.active{background:var(--accent-soft);color:var(--accent)}
+.eq-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.eq-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;box-shadow:var(--shadow);transition:transform var(--t) var(--ease),box-shadow var(--t) var(--ease),border-color var(--t)}
+.eq-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);border-color:var(--line-strong)}
+.eq-card:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(91,95,232,.3)}
+.eq-card.attention{border-color:#f3c9a0}.eq-card.written-off{opacity:.6}
+.eq-card-photo{position:relative;aspect-ratio:4/3;background:#f4f6fa}
+.eq-card-photo .eq-thumb{width:100%;height:100%;border-radius:0}
+.eq-card-status{position:absolute;left:10px;top:10px}.eq-card-status .status{box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.eq-photo-count{position:absolute;right:10px;top:10px;background:rgba(20,27,45,.72);color:#fff;font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px}
+.eq-card-body{padding:12px 14px 14px;display:grid;gap:4px}.eq-card-body>b{font-size:14px;line-height:1.3}
+.eq-card-money{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0 4px;padding:8px 10px;background:#f7f8fb;border-radius:10px}
+.eq-card-money small{display:block;font-size:10.5px;color:var(--muted);font-weight:600}.eq-card-money b{color:var(--green)}
+.eq-thumb{display:block;overflow:hidden;border-radius:10px;background:#f4f6fa;flex:none}
+.eq-thumb img,.eq-thumb .eq-art{width:100%;height:100%;object-fit:cover;display:block}
+.eq-thumb.sm{width:40px;height:40px;border-radius:9px}
+.eq-name-cell{display:flex;align-items:center;gap:10px}
+.eq-row{cursor:pointer}.eq-row:hover td{background:#f8f9ff}
+.eq-view{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px}
+.eq-view-main{aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#f4f6fa;border:1px solid var(--line)}
+.eq-view-main img,.eq-view-main .eq-art{width:100%;height:100%;object-fit:contain;display:block}
+.eq-view-thumbs{display:flex;gap:8px;margin-top:8px}
+.eq-view-thumb{width:64px;height:48px;border-radius:8px;overflow:hidden;border:2px solid transparent;padding:0;background:#f4f6fa}
+.eq-view-thumb.active{border-color:var(--accent)}.eq-view-thumb img{width:100%;height:100%;object-fit:cover}
+.eq-view-info{display:grid;gap:12px;align-content:start}
+.eq-view-status{display:flex;gap:6px;flex-wrap:wrap}
+.eq-view-money{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.eq-view-money>div{padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fafbfd}
+.eq-view-money small{display:block;font-size:11px;color:var(--muted);font-weight:600;margin-bottom:3px}.eq-view-money b{font-size:14px}
+.eq-photo-edit{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.eq-photo-chip{position:relative;width:84px;height:64px;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.eq-photo-chip img{width:100%;height:100%;object-fit:cover}
+.eq-photo-chip button{position:absolute;top:3px;right:3px;width:22px;height:22px;border-radius:50%;border:0;background:rgba(20,27,45,.75);color:#fff;font-size:11px;line-height:22px;padding:0}
+@media(max-width:760px){.eq-view{grid-template-columns:1fr}.eq-view-money{grid-template-columns:1fr 1fr}.eq-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.eq-card-body{padding:10px}.eq-card-money{grid-template-columns:1fr}.view-toggle{width:100%}.vt-btn{flex:1}}
+@media(max-width:380px){.eq-grid{grid-template-columns:1fr}}
+.eq-card-photo{aspect-ratio:16/10}.eq-card-photo .eq-art{padding:16px 0}.eq-view-main .eq-art{padding:40px 0}
