@@ -31,6 +31,7 @@ function seedDemoOperations(){if(Number(opState.demoOpsSeedVersion||0)>=1)return
 function v20Boot(){
  try{loadOperationalState()}catch(e){console.error('loadOperationalState',e)}
  safeRun('demo ops',seedDemoOperations);
+ safeRun('demo equipment',seedDemoEquipment);
  safeRun('dates',()=>{const today=new Date().toISOString().slice(0,10),wk=new Date(Date.now()-6*86400000).toISOString().slice(0,10);const set=(id,v)=>{const e=document.getElementById(id);if(e)e.value=v};set('invDayDate',today);set('historyFrom',wk);set('historyTo',today);set('reconcileDate',today)});
  safeRun('receipt seq',()=>{const ids=(opState.receipts||[]).map(r=>Number(String(r.id).replace(/\D/g,''))).filter(Number.isFinite);receiptSeq=Math.max(185,...ids.map(n=>n+1))});
  safeRun('nav icons',setupNavIcons);safeRun('topbar',setupTopbar);safeRun('login',setupLoginScreen);safeRun('inv filters',setupInventoryFilters);

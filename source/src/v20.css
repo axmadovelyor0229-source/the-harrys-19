@@ -196,6 +196,9 @@ body.modal-open{overflow:hidden}
 .sum-tile{padding:12px;border-radius:12px;background:#f6f7fb;border:1px solid var(--line)}.sum-tile small{display:block;color:var(--muted);font-weight:600}.sum-tile b{font-size:22px;display:block}.sum-tile span{font-size:11.5px;font-weight:700}
 .sum-tile.good b{color:var(--green)}.sum-tile.bad b,.sum-tile.bad span{color:var(--red)}.sum-tile.info b,.sum-tile.info span{color:var(--info)}
 
+/* Оборудование */
+.eq-life{display:flex;align-items:center;gap:8px;min-width:150px}.eq-life-bar{flex:1;height:8px;border-radius:99px;background:#eef1f6;overflow:hidden;min-width:60px}.eq-life-bar i{display:block;height:100%;border-radius:99px;background:#2f9e6e}.eq-life-bar.warn i{background:#e5a020}.eq-life-bar.bad i{background:#e5484d}.eq-life b{font-size:12px;white-space:nowrap}
+.equipment-table{min-width:0!important}.equipment-table th,.equipment-table td{white-space:normal!important;padding:9px 6px;vertical-align:middle;font-size:12.5px}.equipment-table td:first-child,.equipment-table th:first-child{padding-left:12px}.equipment-table td:first-child{min-width:150px}.equipment-table .eq-life{min-width:105px}.equipment-table .status{white-space:normal;line-height:1.25}.equipment-table td.nowrap{white-space:nowrap!important}.equipment-table .row-actions{white-space:normal!important;min-width:92px}.equipment-table .row-actions .btn{margin:2px 0;width:100%;justify-content:center}
 /* Reports */
 .report-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
 .report-card{padding:16px;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:start}

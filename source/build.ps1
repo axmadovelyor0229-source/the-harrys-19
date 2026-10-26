@@ -3,7 +3,7 @@ $root = $PSScriptRoot
 $enc = New-Object Text.UTF8Encoding $false
 $t = [IO.File]::ReadAllText("$root\work\index.html")
 $css = [IO.File]::ReadAllText("$root\src\v20.css")
-$js = [IO.File]::ReadAllText("$root\src\v20_core.js") + "`n" + [IO.File]::ReadAllText("$root\src\v20_excel.js") + "`n" + [IO.File]::ReadAllText("$root\src\v20_boot.js")
+$js = [IO.File]::ReadAllText("$root\src\v20_core.js") + "`n" + [IO.File]::ReadAllText("$root\src\v20_excel.js") + "`n" + [IO.File]::ReadAllText("$root\src\v20_equipment.js") + "`n" + [IO.File]::ReadAllText("$root\src\v20_boot.js")
 $logo = [IO.File]::ReadAllText("$root\orig\logo.b64")
 
 function Must($text, $needle) { if (-not $text.Contains($needle)) { throw "Marker not found: $needle" } }
